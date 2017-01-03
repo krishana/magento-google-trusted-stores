@@ -23,7 +23,9 @@
     gts.push( ['id', '<?php echo $this->escapeHtml( $this->getStoreId() ) ?>'] );
 
     gts.push( ['badge_position', '<?php echo $this->escapeHtml( $this->getBadgePosition() ) ?>'] );
-
+    
+    gts.push(["google_base_offer_id", "ITEM_GOOGLE_SHOPPING_ID"]); // Fix offer_id issue in magento 1.9.2
+    
     <?php if( $this->requiresBadgeContainer() ) : ?>
         gts.push( ['badge_container', '<?php echo $this->escapeHtml( $this->getBadgeContainer() ) ?>'] );
     <?php endif; ?>
